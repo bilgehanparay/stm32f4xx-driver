@@ -24,6 +24,8 @@
 
 int main(void)
 {
+	printf("Hello world");
+	printf("Hello world for First Push!");
     /* Loop forever */
 	for(;;);
 }
