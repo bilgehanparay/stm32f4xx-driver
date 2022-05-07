@@ -9,7 +9,14 @@
 #define INC_STM32F407XX_H_
 #include <stdint.h>
 
+/*Generic Macros*/
 #define __vo volatile
+#define ENABLE	1
+#define DISABLE	0
+#define SET		ENABLE
+#define RESET	DISABLE
+#define GPIO_PIN_SET SET
+#define GPIO_PIN_RESET   RESET
 /**
  * Base addresses of flash and SRAM memories
  * */
@@ -22,11 +29,11 @@
 /**
  * Base addresses of bus domains
  * */
-#define PERIPH_BASE			0x40000000U;
-#define APB1PERIPH_BASE		PERIPH_BASE;
-#define APB2PERIPH_BASE		0x40010000U;
-#define AHB1PERIPH_BASE		0x40020000U;
-#define AHB2PERIPH_BASE		0x50000000U;
+#define PERIPH_BASE			0x40000000U
+#define APB1PERIPH_BASE		PERIPH_BASE
+#define APB2PERIPH_BASE		0x40010000U
+#define AHB1PERIPH_BASE		0x40020000U
+#define AHB2PERIPH_BASE		0x50000000U
 
 /**
  * Base addresses of AHB1
@@ -42,7 +49,7 @@
 #define GPIOI_BASEADDR		(AHB1PERIPH_BASE+0x2000)
 #define GPIOJ_BASEADDR		(AHB1PERIPH_BASE+0x2400)
 #define GPIOK_BASEADDR		(AHB1PERIPH_BASE+0x2800)
-#define RCC_BASEADDR		(AHB1PERIPH_BASE+0x3800);
+#define RCC_BASEADDR		(AHB1PERIPH_BASE+0x3800)
 
 /**
  * Base addresses of AHB2
@@ -126,7 +133,7 @@ typedef struct{
 	__vo uint32_t PLLI2SCFGR;
 	__vo uint32_t PLLSAICFGR;
 	__vo uint32_t DCKCFGR;
-};RCC_RegDef_t;
+}RCC_RegDef_t;
 
 #define GPIOA		((GPIO_RegDef_t*)GPIOA_BASEADDR)
 #define GPIOB		((GPIO_RegDef_t*)GPIOB_BASEADDR)
@@ -140,51 +147,52 @@ typedef struct{
 #define GPIOJ		((GPIO_RegDef_t*)GPIOJ_BASEADDR)
 #define GPIOK		((GPIO_RegDef_t*)GPIOK_BASEADDR)
 
-#define RCC			((GPIO_RegDef_t*)RCC_BASEADDR)
+#define RCC			((RCC_RegDef_t*)RCC_BASEADDR)
 
 /**
  * Clock Enable macros for GPIOx peripherals
  * */
-#define GPIOA_PCLK_EN()	(RCC->AHB1ENR |= (1 << 0));
-#define GPIOB_PCLK_EN()	(RCC->AHB1ENR |= (1 << 1));
-#define GPIOC_PCLK_EN()	(RCC->AHB1ENR |= (1 << 2));
-#define GPIOD_PCLK_EN()	(RCC->AHB1ENR |= (1 << 3));
-#define GPIOE_PCLK_EN()	(RCC->AHB1ENR |= (1 << 4));
-#define GPIOF_PCLK_EN()	(RCC->AHB1ENR |= (1 << 5));
-#define GPIOG_PCLK_EN()	(RCC->AHB1ENR |= (1 << 6));
-#define GPIOH_PCLK_EN()	(RCC->AHB1ENR |= (1 << 7));
-#define GPIOI_PCLK_EN()	(RCC->AHB1ENR |= (1 << 8));
-#define GPIOJ_PCLK_EN()	(RCC->AHB1ENR |= (1 << 9));
-#define GPIOK_PCLK_EN()	(RCC->AHB1ENR |= (1 << 10));
+#define GPIOA_PCLK_EN()	(RCC->AHB1ENR |= (1 << 0))
+#define GPIOB_PCLK_EN()	(RCC->AHB1ENR |= (1 << 1))
+#define GPIOC_PCLK_EN()	(RCC->AHB1ENR |= (1 << 2))
+#define GPIOD_PCLK_EN()	(RCC->AHB1ENR |= (1 << 3))
+#define GPIOE_PCLK_EN()	(RCC->AHB1ENR |= (1 << 4))
+#define GPIOF_PCLK_EN()	(RCC->AHB1ENR |= (1 << 5))
+#define GPIOG_PCLK_EN()	(RCC->AHB1ENR |= (1 << 6))
+#define GPIOH_PCLK_EN()	(RCC->AHB1ENR |= (1 << 7))
+#define GPIOI_PCLK_EN()	(RCC->AHB1ENR |= (1 << 8))
+#define GPIOJ_PCLK_EN()	(RCC->AHB1ENR |= (1 << 9))
+#define GPIOK_PCLK_EN()	(RCC->AHB1ENR |= (1 << 10))
 
 
 /**
  * clock Enable macros for I2C peripherals
  * */
-#define I2C1_PCLK_EN()	(RCC->APB1ENR |= (1 << 21));
-#define I2C2_PCLK_EN()	(RCC->APB1ENR |= (1 << 22));
-#define I2C3_PCLK_EN()	(RCC->APB1ENR |= (1 << 23));
+#define I2C1_PCLK_EN()	(RCC->APB1ENR |= (1 << 21))
+#define I2C2_PCLK_EN()	(RCC->APB1ENR |= (1 << 22))
+#define I2C3_PCLK_EN()	(RCC->APB1ENR |= (1 << 23))
 /**
  * clock Enable macros for SPI peripherals
  * */
-#define SPI1_PCLK_EN()	(RCC->APB2ENR |= (1 << 12));
-#define SPI4_PCLK_EN()	(RCC->APB2ENR |= (1 << 13));
+#define SPI1_PCLK_EN()	(RCC->APB2ENR |= (1 << 12))
+#define SPI4_PCLK_EN()	(RCC->APB2ENR |= (1 << 13))
 
 
 /**
  * Clock disable macros for GPIO peripherals
  * */
-#define GPIOA_PCLK_DI()	(RCC->AHB1ENR &= ~(1 << 0));
-#define GPIOB_PCLK_DI()	(RCC->AHB1ENR &= ~(1 << 1));
-#define GPIOC_PCLK_DI()	(RCC->AHB1ENR &= ~(1 << 2));
-#define GPIOD_PCLK_DI()	(RCC->AHB1ENR &= ~(1 << 3));
-#define GPIOE_PCLK_DI()	(RCC->AHB1ENR &= ~(1 << 4));
-#define GPIOF_PCLK_DI()	(RCC->AHB1ENR &= ~(1 << 5));
-#define GPIOG_PCLK_DI()	(RCC->AHB1ENR &= ~(1 << 6));
-#define GPIOH_PCLK_DI()	(RCC->AHB1ENR &= ~(1 << 7));
-#define GPIOI_PCLK_DI()	(RCC->AHB1ENR &= ~(1 << 8));
-#define GPIOJ_PCLK_DI()	(RCC->AHB1ENR &= ~(1 << 9));
-#define GPIOK_PCLK_DI()	(RCC->AHB1ENR &= ~(1 << 10));
+#define GPIOA_PCLK_DI()	(RCC->AHB1ENR &= ~(1 << 0))
+#define GPIOB_PCLK_DI()	(RCC->AHB1ENR &= ~(1 << 1))
+#define GPIOC_PCLK_DI()	(RCC->AHB1ENR &= ~(1 << 2))
+#define GPIOD_PCLK_DI()	(RCC->AHB1ENR &= ~(1 << 3))
+#define GPIOE_PCLK_DI()	(RCC->AHB1ENR &= ~(1 << 4))
+#define GPIOF_PCLK_DI()	(RCC->AHB1ENR &= ~(1 << 5))
+#define GPIOG_PCLK_DI()	(RCC->AHB1ENR &= ~(1 << 6))
+#define GPIOH_PCLK_DI()	(RCC->AHB1ENR &= ~(1 << 7))
+#define GPIOI_PCLK_DI()	(RCC->AHB1ENR &= ~(1 << 8))
+#define GPIOJ_PCLK_DI()	(RCC->AHB1ENR &= ~(1 << 9))
+#define GPIOK_PCLK_DI()	(RCC->AHB1ENR &= ~(1 << 10))
+
 #endif /* INC_STM32F407XX_H_ */
 
 //TODO: define base address of other devices on this bus

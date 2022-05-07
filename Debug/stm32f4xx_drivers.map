@@ -89,11 +89,37 @@ Discarded input sections
  .group         0x0000000000000000        0xc ./Src/main.o
  .group         0x0000000000000000        0xc ./Src/main.o
  .group         0x0000000000000000        0xc ./Src/main.o
+ .group         0x0000000000000000        0xc ./Src/main.o
+ .group         0x0000000000000000        0xc ./Src/main.o
+ .group         0x0000000000000000        0xc ./Src/main.o
+ .group         0x0000000000000000        0xc ./Src/main.o
+ .group         0x0000000000000000        0xc ./Src/main.o
+ .group         0x0000000000000000        0xc ./Src/main.o
+ .group         0x0000000000000000        0xc ./Src/main.o
+ .group         0x0000000000000000        0xc ./Src/main.o
+ .group         0x0000000000000000        0xc ./Src/main.o
+ .group         0x0000000000000000        0xc ./Src/main.o
+ .group         0x0000000000000000        0xc ./Src/main.o
+ .group         0x0000000000000000        0xc ./Src/main.o
+ .group         0x0000000000000000        0xc ./Src/main.o
+ .group         0x0000000000000000        0xc ./Src/main.o
+ .group         0x0000000000000000        0xc ./Src/main.o
+ .group         0x0000000000000000        0xc ./Src/main.o
+ .group         0x0000000000000000        0xc ./Src/main.o
+ .group         0x0000000000000000        0xc ./Src/main.o
+ .group         0x0000000000000000        0xc ./Src/main.o
+ .group         0x0000000000000000        0xc ./Src/main.o
+ .group         0x0000000000000000        0xc ./Src/main.o
+ .group         0x0000000000000000        0xc ./Src/main.o
+ .group         0x0000000000000000        0xc ./Src/main.o
+ .group         0x0000000000000000        0xc ./Src/main.o
+ .group         0x0000000000000000        0xc ./Src/main.o
+ .group         0x0000000000000000        0xc ./Src/main.o
+ .group         0x0000000000000000        0xc ./Src/main.o
+ .group         0x0000000000000000        0xc ./Src/main.o
  .text          0x0000000000000000        0x0 ./Src/main.o
  .data          0x0000000000000000        0x0 ./Src/main.o
  .bss           0x0000000000000000        0x0 ./Src/main.o
- .bss.RCC_RegDef_t
-                0x0000000000000000        0x4 ./Src/main.o
  .group         0x0000000000000000        0xc ./Src/syscalls.o
  .group         0x0000000000000000        0xc ./Src/syscalls.o
  .group         0x0000000000000000        0xc ./Src/syscalls.o
@@ -161,7 +187,31 @@ Discarded input sections
  .text._execve  0x0000000000000000       0x22 ./Src/syscalls.o
  .debug_macro   0x0000000000000000      0xa84 ./Src/syscalls.o
  .debug_macro   0x0000000000000000       0x22 ./Src/syscalls.o
+ .debug_macro   0x0000000000000000       0x1e ./Src/syscalls.o
+ .debug_macro   0x0000000000000000       0x3c ./Src/syscalls.o
+ .debug_macro   0x0000000000000000       0x34 ./Src/syscalls.o
+ .debug_macro   0x0000000000000000      0x341 ./Src/syscalls.o
+ .debug_macro   0x0000000000000000       0x16 ./Src/syscalls.o
+ .debug_macro   0x0000000000000000       0x43 ./Src/syscalls.o
+ .debug_macro   0x0000000000000000       0x34 ./Src/syscalls.o
+ .debug_macro   0x0000000000000000       0x10 ./Src/syscalls.o
+ .debug_macro   0x0000000000000000       0x58 ./Src/syscalls.o
+ .debug_macro   0x0000000000000000       0x71 ./Src/syscalls.o
+ .debug_macro   0x0000000000000000       0x1c ./Src/syscalls.o
+ .debug_macro   0x0000000000000000      0x12a ./Src/syscalls.o
+ .debug_macro   0x0000000000000000       0x10 ./Src/syscalls.o
  .debug_macro   0x0000000000000000       0x6a ./Src/syscalls.o
+ .debug_macro   0x0000000000000000       0x1c ./Src/syscalls.o
+ .debug_macro   0x0000000000000000       0x52 ./Src/syscalls.o
+ .debug_macro   0x0000000000000000       0x22 ./Src/syscalls.o
+ .debug_macro   0x0000000000000000       0x10 ./Src/syscalls.o
+ .debug_macro   0x0000000000000000       0x52 ./Src/syscalls.o
+ .debug_macro   0x0000000000000000       0xd5 ./Src/syscalls.o
+ .debug_macro   0x0000000000000000       0x1c ./Src/syscalls.o
+ .debug_macro   0x0000000000000000       0x3d ./Src/syscalls.o
+ .debug_macro   0x0000000000000000       0x10 ./Src/syscalls.o
+ .debug_macro   0x0000000000000000       0x16 ./Src/syscalls.o
+ .debug_macro   0x0000000000000000      0x145 ./Src/syscalls.o
  .group         0x0000000000000000        0xc ./Src/sysmem.o
  .group         0x0000000000000000        0xc ./Src/sysmem.o
  .group         0x0000000000000000        0xc ./Src/sysmem.o
@@ -211,6 +261,57 @@ Discarded input sections
  .text          0x0000000000000000       0x14 ./Startup/startup_stm32f407vgtx.o
  .data          0x0000000000000000        0x0 ./Startup/startup_stm32f407vgtx.o
  .bss           0x0000000000000000        0x0 ./Startup/startup_stm32f407vgtx.o
+ .group         0x0000000000000000        0xc ./drivers/Src/stm32f407xx_gpio_driver.o
+ .group         0x0000000000000000        0xc ./drivers/Src/stm32f407xx_gpio_driver.o
+ .group         0x0000000000000000        0xc ./drivers/Src/stm32f407xx_gpio_driver.o
+ .group         0x0000000000000000        0xc ./drivers/Src/stm32f407xx_gpio_driver.o
+ .group         0x0000000000000000        0xc ./drivers/Src/stm32f407xx_gpio_driver.o
+ .group         0x0000000000000000        0xc ./drivers/Src/stm32f407xx_gpio_driver.o
+ .group         0x0000000000000000        0xc ./drivers/Src/stm32f407xx_gpio_driver.o
+ .group         0x0000000000000000        0xc ./drivers/Src/stm32f407xx_gpio_driver.o
+ .text          0x0000000000000000        0x0 ./drivers/Src/stm32f407xx_gpio_driver.o
+ .data          0x0000000000000000        0x0 ./drivers/Src/stm32f407xx_gpio_driver.o
+ .bss           0x0000000000000000        0x0 ./drivers/Src/stm32f407xx_gpio_driver.o
+ .text.GPIO_PeriClockControl
+                0x0000000000000000      0x230 ./drivers/Src/stm32f407xx_gpio_driver.o
+ .text.GPIO_Init
+                0x0000000000000000       0x14 ./drivers/Src/stm32f407xx_gpio_driver.o
+ .text.GPIO_DeInit
+                0x0000000000000000       0x14 ./drivers/Src/stm32f407xx_gpio_driver.o
+ .text.GPIO_ReadFromInputPin
+                0x0000000000000000       0x1a ./drivers/Src/stm32f407xx_gpio_driver.o
+ .text.GPIO_ReadFomInputPort
+                0x0000000000000000       0x16 ./drivers/Src/stm32f407xx_gpio_driver.o
+ .text.GPIO_WriteToOutputPin
+                0x0000000000000000       0x1c ./drivers/Src/stm32f407xx_gpio_driver.o
+ .text.GPIO_WriteToOutputPort
+                0x0000000000000000       0x18 ./drivers/Src/stm32f407xx_gpio_driver.o
+ .text.GPIO_TogglePin
+                0x0000000000000000       0x18 ./drivers/Src/stm32f407xx_gpio_driver.o
+ .text.GPIO_IRQConfig
+                0x0000000000000000       0x1e ./drivers/Src/stm32f407xx_gpio_driver.o
+ .text.GPIO_IRQHandling
+                0x0000000000000000       0x16 ./drivers/Src/stm32f407xx_gpio_driver.o
+ .debug_info    0x0000000000000000      0x5de ./drivers/Src/stm32f407xx_gpio_driver.o
+ .debug_abbrev  0x0000000000000000       0xf4 ./drivers/Src/stm32f407xx_gpio_driver.o
+ .debug_aranges
+                0x0000000000000000       0x68 ./drivers/Src/stm32f407xx_gpio_driver.o
+ .debug_ranges  0x0000000000000000       0x58 ./drivers/Src/stm32f407xx_gpio_driver.o
+ .debug_macro   0x0000000000000000       0x7c ./drivers/Src/stm32f407xx_gpio_driver.o
+ .debug_macro   0x0000000000000000      0xa84 ./drivers/Src/stm32f407xx_gpio_driver.o
+ .debug_macro   0x0000000000000000       0x22 ./drivers/Src/stm32f407xx_gpio_driver.o
+ .debug_macro   0x0000000000000000       0x8e ./drivers/Src/stm32f407xx_gpio_driver.o
+ .debug_macro   0x0000000000000000       0x51 ./drivers/Src/stm32f407xx_gpio_driver.o
+ .debug_macro   0x0000000000000000      0x103 ./drivers/Src/stm32f407xx_gpio_driver.o
+ .debug_macro   0x0000000000000000       0x6a ./drivers/Src/stm32f407xx_gpio_driver.o
+ .debug_macro   0x0000000000000000      0x1df ./drivers/Src/stm32f407xx_gpio_driver.o
+ .debug_macro   0x0000000000000000      0x217 ./drivers/Src/stm32f407xx_gpio_driver.o
+ .debug_line    0x0000000000000000      0x5d6 ./drivers/Src/stm32f407xx_gpio_driver.o
+ .debug_str     0x0000000000000000     0x4b94 ./drivers/Src/stm32f407xx_gpio_driver.o
+ .comment       0x0000000000000000       0x51 ./drivers/Src/stm32f407xx_gpio_driver.o
+ .debug_frame   0x0000000000000000      0x1a0 ./drivers/Src/stm32f407xx_gpio_driver.o
+ .ARM.attributes
+                0x0000000000000000       0x34 ./drivers/Src/stm32f407xx_gpio_driver.o
  .text          0x0000000000000000        0x0 /opt/st/stm32cubeide_1.9.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.0.202111181127/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-errno.o)
  .data          0x0000000000000000        0x0 /opt/st/stm32cubeide_1.9.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.0.202111181127/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-errno.o)
  .bss           0x0000000000000000        0x0 /opt/st/stm32cubeide_1.9.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.0.202111181127/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-errno.o)
@@ -415,6 +516,7 @@ LOAD ./Src/main.o
 LOAD ./Src/syscalls.o
 LOAD ./Src/sysmem.o
 LOAD ./Startup/startup_stm32f407vgtx.o
+LOAD ./drivers/Src/stm32f407xx_gpio_driver.o
 START GROUP
 LOAD /opt/st/stm32cubeide_1.9.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.0.202111181127/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a
 LOAD /opt/st/stm32cubeide_1.9.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.0.202111181127/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a
@@ -937,17 +1039,17 @@ LOAD /opt/st/stm32cubeide_1.9.0/plugins/com.st.stm32cube.ide.mcu.externaltools.g
 LOAD /opt/st/stm32cubeide_1.9.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.0.202111181127/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a
 LOAD /opt/st/stm32cubeide_1.9.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.0.202111181127/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/libgcc.a
 
-.debug_info     0x0000000000000000      0x934
- .debug_info    0x0000000000000000       0xc1 ./Src/main.o
- .debug_info    0x00000000000000c1      0x6e0 ./Src/syscalls.o
- .debug_info    0x00000000000007a1      0x171 ./Src/sysmem.o
- .debug_info    0x0000000000000912       0x22 ./Startup/startup_stm32f407vgtx.o
+.debug_info     0x0000000000000000      0x929
+ .debug_info    0x0000000000000000       0xb6 ./Src/main.o
+ .debug_info    0x00000000000000b6      0x6e0 ./Src/syscalls.o
+ .debug_info    0x0000000000000796      0x171 ./Src/sysmem.o
+ .debug_info    0x0000000000000907       0x22 ./Startup/startup_stm32f407vgtx.o
 
-.debug_abbrev   0x0000000000000000      0x30d
- .debug_abbrev  0x0000000000000000       0x8d ./Src/main.o
- .debug_abbrev  0x000000000000008d      0x1b3 ./Src/syscalls.o
- .debug_abbrev  0x0000000000000240       0xbb ./Src/sysmem.o
- .debug_abbrev  0x00000000000002fb       0x12 ./Startup/startup_stm32f407vgtx.o
+.debug_abbrev   0x0000000000000000      0x2fc
+ .debug_abbrev  0x0000000000000000       0x7c ./Src/main.o
+ .debug_abbrev  0x000000000000007c      0x1b3 ./Src/syscalls.o
+ .debug_abbrev  0x000000000000022f       0xbb ./Src/sysmem.o
+ .debug_abbrev  0x00000000000002ea       0x12 ./Startup/startup_stm32f407vgtx.o
 
 .debug_aranges  0x0000000000000000      0x110
  .debug_aranges
@@ -965,78 +1067,82 @@ LOAD /opt/st/stm32cubeide_1.9.0/plugins/com.st.stm32cube.ide.mcu.externaltools.g
  .debug_ranges  0x00000000000000a8       0x10 ./Src/sysmem.o
  .debug_ranges  0x00000000000000b8       0x20 ./Startup/startup_stm32f407vgtx.o
 
-.debug_macro    0x0000000000000000     0x2a82
- .debug_macro   0x0000000000000000       0x6c ./Src/main.o
- .debug_macro   0x000000000000006c      0xa84 ./Src/main.o
- .debug_macro   0x0000000000000af0       0x22 ./Src/main.o
- .debug_macro   0x0000000000000b12       0x8e ./Src/main.o
- .debug_macro   0x0000000000000ba0       0x51 ./Src/main.o
- .debug_macro   0x0000000000000bf1      0x103 ./Src/main.o
- .debug_macro   0x0000000000000cf4       0x6a ./Src/main.o
- .debug_macro   0x0000000000000d5e      0x1df ./Src/main.o
- .debug_macro   0x0000000000000f3d      0x1f9 ./Src/main.o
- .debug_macro   0x0000000000001136      0x24c ./Src/syscalls.o
- .debug_macro   0x0000000000001382       0x4c ./Src/syscalls.o
- .debug_macro   0x00000000000013ce       0x1e ./Src/syscalls.o
- .debug_macro   0x00000000000013ec       0x94 ./Src/syscalls.o
- .debug_macro   0x0000000000001480       0x3c ./Src/syscalls.o
- .debug_macro   0x00000000000014bc       0x34 ./Src/syscalls.o
- .debug_macro   0x00000000000014f0       0x57 ./Src/syscalls.o
- .debug_macro   0x0000000000001547      0x174 ./Src/syscalls.o
- .debug_macro   0x00000000000016bb      0x341 ./Src/syscalls.o
- .debug_macro   0x00000000000019fc       0x16 ./Src/syscalls.o
- .debug_macro   0x0000000000001a12       0x43 ./Src/syscalls.o
- .debug_macro   0x0000000000001a55       0x34 ./Src/syscalls.o
- .debug_macro   0x0000000000001a89       0x10 ./Src/syscalls.o
- .debug_macro   0x0000000000001a99       0x58 ./Src/syscalls.o
- .debug_macro   0x0000000000001af1       0x71 ./Src/syscalls.o
- .debug_macro   0x0000000000001b62       0x1c ./Src/syscalls.o
- .debug_macro   0x0000000000001b7e      0x12a ./Src/syscalls.o
- .debug_macro   0x0000000000001ca8       0x10 ./Src/syscalls.o
- .debug_macro   0x0000000000001cb8       0x35 ./Src/syscalls.o
- .debug_macro   0x0000000000001ced       0x10 ./Src/syscalls.o
- .debug_macro   0x0000000000001cfd       0x10 ./Src/syscalls.o
- .debug_macro   0x0000000000001d0d       0x10 ./Src/syscalls.o
- .debug_macro   0x0000000000001d1d       0x1c ./Src/syscalls.o
- .debug_macro   0x0000000000001d39       0x52 ./Src/syscalls.o
- .debug_macro   0x0000000000001d8b       0x22 ./Src/syscalls.o
- .debug_macro   0x0000000000001dad       0x10 ./Src/syscalls.o
- .debug_macro   0x0000000000001dbd       0x52 ./Src/syscalls.o
- .debug_macro   0x0000000000001e0f       0xd5 ./Src/syscalls.o
- .debug_macro   0x0000000000001ee4       0x1c ./Src/syscalls.o
- .debug_macro   0x0000000000001f00       0x3d ./Src/syscalls.o
- .debug_macro   0x0000000000001f3d       0x35 ./Src/syscalls.o
- .debug_macro   0x0000000000001f72      0x12c ./Src/syscalls.o
- .debug_macro   0x000000000000209e       0x16 ./Src/syscalls.o
- .debug_macro   0x00000000000020b4       0x16 ./Src/syscalls.o
- .debug_macro   0x00000000000020ca       0x29 ./Src/syscalls.o
- .debug_macro   0x00000000000020f3       0x10 ./Src/syscalls.o
- .debug_macro   0x0000000000002103      0x241 ./Src/syscalls.o
- .debug_macro   0x0000000000002344       0x1c ./Src/syscalls.o
- .debug_macro   0x0000000000002360       0x10 ./Src/syscalls.o
- .debug_macro   0x0000000000002370       0x10 ./Src/syscalls.o
- .debug_macro   0x0000000000002380       0x16 ./Src/syscalls.o
- .debug_macro   0x0000000000002396      0x145 ./Src/syscalls.o
- .debug_macro   0x00000000000024db      0x189 ./Src/syscalls.o
- .debug_macro   0x0000000000002664       0x16 ./Src/syscalls.o
- .debug_macro   0x000000000000267a       0xce ./Src/syscalls.o
- .debug_macro   0x0000000000002748       0xff ./Src/sysmem.o
- .debug_macro   0x0000000000002847      0x23b ./Src/sysmem.o
+.debug_macro    0x0000000000000000     0x2e06
+ .debug_macro   0x0000000000000000      0x1d0 ./Src/main.o
+ .debug_macro   0x00000000000001d0      0xa84 ./Src/main.o
+ .debug_macro   0x0000000000000c54       0x22 ./Src/main.o
+ .debug_macro   0x0000000000000c76       0x8e ./Src/main.o
+ .debug_macro   0x0000000000000d04       0x51 ./Src/main.o
+ .debug_macro   0x0000000000000d55      0x103 ./Src/main.o
+ .debug_macro   0x0000000000000e58       0x6a ./Src/main.o
+ .debug_macro   0x0000000000000ec2      0x1df ./Src/main.o
+ .debug_macro   0x00000000000010a1      0x21d ./Src/main.o
+ .debug_macro   0x00000000000012be       0x52 ./Src/main.o
+ .debug_macro   0x0000000000001310       0x1e ./Src/main.o
+ .debug_macro   0x000000000000132e       0x3c ./Src/main.o
+ .debug_macro   0x000000000000136a       0x34 ./Src/main.o
+ .debug_macro   0x000000000000139e       0x16 ./Src/main.o
+ .debug_macro   0x00000000000013b4       0x97 ./Src/main.o
+ .debug_macro   0x000000000000144b      0x341 ./Src/main.o
+ .debug_macro   0x000000000000178c       0xfd ./Src/main.o
+ .debug_macro   0x0000000000001889       0x10 ./Src/main.o
+ .debug_macro   0x0000000000001899       0x16 ./Src/main.o
+ .debug_macro   0x00000000000018af       0x43 ./Src/main.o
+ .debug_macro   0x00000000000018f2       0x34 ./Src/main.o
+ .debug_macro   0x0000000000001926       0x10 ./Src/main.o
+ .debug_macro   0x0000000000001936       0x58 ./Src/main.o
+ .debug_macro   0x000000000000198e       0x71 ./Src/main.o
+ .debug_macro   0x00000000000019ff       0x1c ./Src/main.o
+ .debug_macro   0x0000000000001a1b      0x12a ./Src/main.o
+ .debug_macro   0x0000000000001b45       0x10 ./Src/main.o
+ .debug_macro   0x0000000000001b55       0x1c ./Src/main.o
+ .debug_macro   0x0000000000001b71       0x52 ./Src/main.o
+ .debug_macro   0x0000000000001bc3       0x22 ./Src/main.o
+ .debug_macro   0x0000000000001be5       0x10 ./Src/main.o
+ .debug_macro   0x0000000000001bf5       0x52 ./Src/main.o
+ .debug_macro   0x0000000000001c47       0xd5 ./Src/main.o
+ .debug_macro   0x0000000000001d1c       0x1c ./Src/main.o
+ .debug_macro   0x0000000000001d38       0x3d ./Src/main.o
+ .debug_macro   0x0000000000001d75       0x16 ./Src/main.o
+ .debug_macro   0x0000000000001d8b      0x145 ./Src/main.o
+ .debug_macro   0x0000000000001ed0      0x24c ./Src/syscalls.o
+ .debug_macro   0x000000000000211c       0x4c ./Src/syscalls.o
+ .debug_macro   0x0000000000002168       0x94 ./Src/syscalls.o
+ .debug_macro   0x00000000000021fc       0x57 ./Src/syscalls.o
+ .debug_macro   0x0000000000002253      0x174 ./Src/syscalls.o
+ .debug_macro   0x00000000000023c7       0x10 ./Src/syscalls.o
+ .debug_macro   0x00000000000023d7       0x35 ./Src/syscalls.o
+ .debug_macro   0x000000000000240c       0x10 ./Src/syscalls.o
+ .debug_macro   0x000000000000241c       0x10 ./Src/syscalls.o
+ .debug_macro   0x000000000000242c       0x35 ./Src/syscalls.o
+ .debug_macro   0x0000000000002461      0x12c ./Src/syscalls.o
+ .debug_macro   0x000000000000258d       0x16 ./Src/syscalls.o
+ .debug_macro   0x00000000000025a3       0x16 ./Src/syscalls.o
+ .debug_macro   0x00000000000025b9       0x29 ./Src/syscalls.o
+ .debug_macro   0x00000000000025e2       0x10 ./Src/syscalls.o
+ .debug_macro   0x00000000000025f2      0x241 ./Src/syscalls.o
+ .debug_macro   0x0000000000002833       0x1c ./Src/syscalls.o
+ .debug_macro   0x000000000000284f       0x10 ./Src/syscalls.o
+ .debug_macro   0x000000000000285f      0x189 ./Src/syscalls.o
+ .debug_macro   0x00000000000029e8       0x16 ./Src/syscalls.o
+ .debug_macro   0x00000000000029fe       0xce ./Src/syscalls.o
+ .debug_macro   0x0000000000002acc       0xff ./Src/sysmem.o
+ .debug_macro   0x0000000000002bcb      0x23b ./Src/sysmem.o
 
-.debug_line     0x0000000000000000     0x10d5
- .debug_line    0x0000000000000000      0x3e1 ./Src/main.o
- .debug_line    0x00000000000003e1      0x7bd ./Src/syscalls.o
- .debug_line    0x0000000000000b9e      0x4b3 ./Src/sysmem.o
- .debug_line    0x0000000000001051       0x84 ./Startup/startup_stm32f407vgtx.o
+.debug_line     0x0000000000000000     0x12a7
+ .debug_line    0x0000000000000000      0x5b3 ./Src/main.o
+ .debug_line    0x00000000000005b3      0x7bd ./Src/syscalls.o
+ .debug_line    0x0000000000000d70      0x4b3 ./Src/sysmem.o
+ .debug_line    0x0000000000001223       0x84 ./Startup/startup_stm32f407vgtx.o
 
-.debug_str      0x0000000000000000     0x9ece
- .debug_str     0x0000000000000000     0x46b3 ./Src/main.o
-                                       0x4813 (size before relaxing)
- .debug_str     0x00000000000046b3     0x577a ./Src/syscalls.o
+.debug_str      0x0000000000000000     0x9ef1
+ .debug_str     0x0000000000000000     0x86e0 ./Src/main.o
+                                       0x88cd (size before relaxing)
+ .debug_str     0x00000000000086e0     0x1770 ./Src/syscalls.o
                                        0x8ab1 (size before relaxing)
- .debug_str     0x0000000000009e2d       0x70 ./Src/sysmem.o
+ .debug_str     0x0000000000009e50       0x70 ./Src/sysmem.o
                                        0x5ded (size before relaxing)
- .debug_str     0x0000000000009e9d       0x31 ./Startup/startup_stm32f407vgtx.o
+ .debug_str     0x0000000000009ec0       0x31 ./Startup/startup_stm32f407vgtx.o
                                          0x99 (size before relaxing)
 
 .comment        0x0000000000000000       0x50

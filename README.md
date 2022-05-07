@@ -1,2 +1,4 @@
 # stm32f4xx-driver
-Drivers for stm32f4 MCU
+MCU peripheral driver codes fo STM32f4Discovery board.
+Developed during the Udemy Course Master Microcontroller and Embedded
+Driver Development - 1 in the STMCube IDE under Ubuntu 20.04.
