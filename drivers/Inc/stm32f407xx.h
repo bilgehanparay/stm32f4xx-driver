@@ -193,6 +193,20 @@ typedef struct{
 #define GPIOJ_PCLK_DI()	(RCC->AHB1ENR &= ~(1 << 9))
 #define GPIOK_PCLK_DI()	(RCC->AHB1ENR &= ~(1 << 10))
 
+/*
+ * Reset gpio clock registers
+ * */
+#define GPIOA_PCLK_RESET()	do{ (RCC->AHB1ENR |= (1 << 0)); (RCC->AHB1ENR &= ~(1 << 0)); }while(0)
+#define GPIOB_PCLK_RESET()	do{ (RCC->AHB1ENR |= (1 << 1)); (RCC->AHB1ENR &= ~(1 << 1)); }while(0)
+#define GPIOC_PCLK_RESET()	do{ (RCC->AHB1ENR |= (1 << 2)); (RCC->AHB1ENR &= ~(1 << 2)); }while(0)
+#define GPIOD_PCLK_RESET()	do{ (RCC->AHB1ENR |= (1 << 3)); (RCC->AHB1ENR &= ~(1 << 3)); }while(0)
+#define GPIOE_PCLK_RESET()	do{ (RCC->AHB1ENR |= (1 << 4)); (RCC->AHB1ENR &= ~(1 << 4)); }while(0)
+#define GPIOF_PCLK_RESET()	do{ (RCC->AHB1ENR |= (1 << 5)); (RCC->AHB1ENR &= ~(1 << 5)); }while(0)
+#define GPIOG_PCLK_RESET()	do{ (RCC->AHB1ENR |= (1 << 6)); (RCC->AHB1ENR &= ~(1 << 6)); }while(0)
+#define GPIOH_PCLK_RESET()	do{ (RCC->AHB1ENR |= (1 << 7)); (RCC->AHB1ENR &= ~(1 << 7)); }while(0)
+#define GPIOI_PCLK_RESET()	do{ (RCC->AHB1ENR |= (1 << 8)); (RCC->AHB1ENR &= ~(1 << 8)); }while(0)
+#define GPIOJ_PCLK_RESET()	do{ (RCC->AHB1ENR |= (1 << 9)); (RCC->AHB1ENR &= ~(1 << 9)); }while(0)
+#define GPIOK_PCLK_RESET()	do{ (RCC->AHB1ENR |= (1 << 10)); (RCC->AHB1ENR &= ~(1 << 10)); }while(0)
 #endif /* INC_STM32F407XX_H_ */
 
 //TODO: define base address of other devices on this bus
