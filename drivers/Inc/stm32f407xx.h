@@ -135,6 +135,28 @@ typedef struct{
 	__vo uint32_t DCKCFGR;
 }RCC_RegDef_t;
 
+/**
+ * Peripheral definition structure for EXTI
+ * */
+typedef struct{
+	__vo uint32_t IMR;
+	__vo uint32_t EMR;
+	__vo uint32_t RTSR;
+	__vo uint32_t FTSR;
+	__vo uint32_t SWIER;
+	__vo uint32_t PR;
+}EXTI_RegDef_t;
+
+typedef struct{
+	__vo uint32_t MEMRMP;
+	__vo uint32_t PMC;
+	__vo uint32_t EXTICR[4];
+	uint32_t RESERVED1[2];
+	__vo uint32_t CMPCR;
+	uint32_t RESERVED2[2];
+	__vo uint32_t CFGR;
+}SYSCFG_RegDef_t;
+
 #define GPIOA		((GPIO_RegDef_t*)GPIOA_BASEADDR)
 #define GPIOB		((GPIO_RegDef_t*)GPIOB_BASEADDR)
 #define GPIOC		((GPIO_RegDef_t*)GPIOC_BASEADDR)
@@ -149,6 +171,7 @@ typedef struct{
 
 #define RCC			((RCC_RegDef_t*)RCC_BASEADDR)
 
+#define EXTI		((EXTI_RegDef_t*)EXTI_BASEADDR)
 /**
  * Clock Enable macros for GPIOx peripherals
  * */
@@ -209,6 +232,10 @@ typedef struct{
 #define GPIOK_PCLK_RESET()	do{ (RCC->AHB1ENR |= (1 << 10)); (RCC->AHB1ENR &= ~(1 << 10)); }while(0)
 #endif /* INC_STM32F407XX_H_ */
 
+/*
+ * Clock Enable macros for SYSCFG peripheral
+ * */
+#define SYSCFG_PCLK_EN() (RCC->APB2ENR |= (1 << 14))
 //TODO: define base address of other devices on this bus
 
 

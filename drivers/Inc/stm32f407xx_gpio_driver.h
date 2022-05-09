@@ -31,7 +31,7 @@ typedef struct{
 #define GPIO_MODE_ANALOG 3
 #define GPIO_MODE_IT_FT 4 // rising trigger
 #define GPIO_MODE_IT_RT 5 // falling trigger
-#define GPIO_MODE_IT_RFT // rising and falling register
+#define GPIO_MODE_IT_RFT 6// rising and falling register
 
 /*
  * GPIO pin possible output types

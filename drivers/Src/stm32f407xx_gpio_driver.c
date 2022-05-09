@@ -99,6 +99,30 @@ void GPIO_Init(GPIO_Handle_t *pGPIOHandle){
 		temp = 0; // clear temp
 	}else{
 		// interrupt mode
+		/*Pin must be in input configuration*/
+		/*Configure the edge trigger*/
+		if(pGPIOHandle->GPIO_PinConfig.GPIO_PinMode == GPIO_MODE_IT_FT){
+			// Configure the FTSR
+			EXTI->FTSR |= 1 << pGPIOHandle->GPIO_PinConfig.GPIO_PinNumber;
+			// clear the RTSR bit
+			EXTI->RTSR &= ~(1 << pGPIOHandle->GPIO_PinConfig.GPIO_PinNumber);
+		}else if (pGPIOHandle->GPIO_PinConfig.GPIO_PinMode == GPIO_MODE_IT_RT){
+			EXTI->RTSR |= 1 << pGPIOHandle->GPIO_PinConfig.GPIO_PinNumber;
+			// clear the RTSR bit
+			EXTI->FTSR &= ~(1 << pGPIOHandle->GPIO_PinConfig.GPIO_PinNumber);
+		}else if (pGPIOHandle->GPIO_PinConfig.GPIO_PinMode == GPIO_MODE_IT_RT){
+			EXTI->FTSR |= 1 << pGPIOHandle->GPIO_PinConfig.GPIO_PinNumber;
+			// clear the RTSR bit
+			EXTI->RTSR |= 1 << pGPIOHandle->GPIO_PinConfig.GPIO_PinNumber;
+		}
+		/*Configure the GPIO Port Selection SYSCFG_EXTICR*/
+
+		/*enable interrupt delivery from peripheral to the processor*/
+		EXTI->IMR |= 1 << pGPIOHandle->GPIO_PinConfig.GPIO_PinNumber;
+		/*identify the IRQ number on which the processor accepts the interrupt from that pin*/
+		/*Configure the IRQ priority for the identified IRQ number(Processor side)*/
+		/*Enable interrupt reception on that IRQ number(Processor side)*/
+		/*Implement IRQ handler*/
 
 	}
 		// Configure the speed
