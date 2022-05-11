@@ -9,6 +9,29 @@
 #define INC_STM32F407XX_H_
 #include <stdint.h>
 
+/*********************** Processor Specific Details ******************/
+#define NO_PR_BITS_IMPLEMENTED	4
+/*
+ *ARM Cortex Mx Processor NVIC ISERx register Addresses
+ */
+#define NVIC_ISER0			((__vo uint32_t *)0xE000E100)
+#define NVIC_ISER1			((__vo uint32_t *)0xE000E104)
+#define NVIC_ISER2			((__vo uint32_t *)0xE000E108)
+#define NVIC_ISER3			((__vo uint32_t *)0xE000E10c)
+/*
+ *ARM Cortex Mx Processor NVIC ICERx register Addresses
+ */
+#define NVIC_ICER0			((__vo uint32_t *)0xE000E180)
+#define NVIC_ICER1			((__vo uint32_t *)0xE000E184)
+#define NVIC_ICER2		    ((__vo uint32_t *)0xE000E188)
+#define NVIC_ICER3			((__vo uint32_t *)0xE000E18C)
+
+/*
+ * ARM Cortex Mx Processor Priority Register Address Calculation
+ * */
+#define NVIC_PR_BASE_ADDR ((__vo uint32_t*)0xE000E400)
+
+/*********************** Processor Specific Details ******************/
 /*Generic Macros*/
 #define __vo volatile
 #define ENABLE	1
@@ -170,8 +193,8 @@ typedef struct{
 #define GPIOK		((GPIO_RegDef_t*)GPIOK_BASEADDR)
 
 #define RCC			((RCC_RegDef_t*)RCC_BASEADDR)
-
 #define EXTI		((EXTI_RegDef_t*)EXTI_BASEADDR)
+#define SYSCFG		((SYSCFG_RegDef_t*)SYSCFG_BASEADDR)
 /**
  * Clock Enable macros for GPIOx peripherals
  * */
@@ -237,8 +260,30 @@ typedef struct{
  * */
 #define SYSCFG_PCLK_EN() (RCC->APB2ENR |= (1 << 14))
 //TODO: define base address of other devices on this bus
+/*
+ * Returns port code for given GPIOx base address
+ * */
+#define GPIO_BASEADDR_TO_CODE(x) ((x == GPIOA) ? 0:\
+								  (x == GPIOB) ? 1:\
+								  (x == GPIOC) ? 2:\
+								  (x == GPIOD) ? 3:\
+								  (x == GPIOE) ? 4:\
+								  (x == GPIOF) ? 5:\
+								  (x == GPIOG) ? 6:\
+								  (x == GPIOH) ? 7:0)
 
 
+/*
+ * IRQ number of STM32f407x MCU
+ * Refer to Vector Table (table 61) of RM
+ * */
+#define IRQ_NO_EXTI0 6
+#define IRQ_NO_EXTI1 7
+#define IRQ_NO_EXTI2 8
+#define IRQ_NO_EXTI3 9
+#define IRQ_NO_EXTI4 10
+#define IRQ_NO_EXTI9_5 23
+#define IRQ_NO_EXTI5_10 40
 
 
 
