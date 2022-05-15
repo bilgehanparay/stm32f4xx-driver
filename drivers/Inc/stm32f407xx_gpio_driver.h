@@ -119,7 +119,7 @@ void GPIO_IRQHandling(uint8_t PinNumber);
  * */
 
 
-// TODO: Enumarate types in the pin config
+// TODO: Enumarate types
 
 
 
