@@ -7,7 +7,9 @@
 
 #ifndef INC_STM32F407XX_H_
 #define INC_STM32F407XX_H_
+
 #include <stdint.h>
+
 
 /*********************** Processor Specific Details ******************/
 #define NO_PR_BITS_IMPLEMENTED	4
@@ -90,6 +92,8 @@
 #define USART3_BASEADDR		(APB1PERIPH_BASE + 0x4800)
 #define UART4_BASEADDR		(APB1PERIPH_BASE + 0x4C00)
 #define UART5_BASEADDR		(APB1PERIPH_BASE + 0x5000)
+#define SPI3I2S3_BASEADDR	(APB2PERIPH_BASE + 0x3C00)
+#define SPI2I2S3_BASEADDR	(APB2PERIPH_BASE + 0x3800)
 
 /**
  * Base addresses of APB2
@@ -99,6 +103,11 @@
 #define USART1_BASEADDR		(APB2PERIPH_BASE + 0x1000)
 #define USART6_BASEADDR		(APB2PERIPH_BASE + 0x1400)
 #define SYSCFG_BASEADDR		(APB2PERIPH_BASE + 0x3800)
+#define SPI5_BASEADDR		(APB2PERIPH_BASE + 0x5000)
+#define SPI6_BASEADDR		(APB2PERIPH_BASE + 0x5400)
+#define SPI1_BASEADDR		(APB2PERIPH_BASE + 0x3000)
+#define SPI4_BASEADDR		(APB2PERIPH_BASE + 0x3400)
+
 
 /********Peripheral definition structures*****************/
 /**
@@ -180,6 +189,22 @@ typedef struct{
 	__vo uint32_t CFGR;
 }SYSCFG_RegDef_t;
 
+/*
+ * Peripheral register definition for SPI
+ * RM Table 129: SPI Register map and reset values
+ * */
+typedef struct{
+	__vo uint32_t CR1;
+	__vo uint32_t CR2;
+	__vo uint32_t SR;
+	__vo uint32_t DR;
+	__vo uint32_t CRCPR;
+	__vo uint32_t RXCRCR;
+	__vo uint32_t TXCRCR;
+	__vo uint32_t I2SCFGR;
+	__vo uint32_t I2SPR;
+}SPI_RegDef_t;
+
 #define GPIOA		((GPIO_RegDef_t*)GPIOA_BASEADDR)
 #define GPIOB		((GPIO_RegDef_t*)GPIOB_BASEADDR)
 #define GPIOC		((GPIO_RegDef_t*)GPIOC_BASEADDR)
@@ -195,6 +220,14 @@ typedef struct{
 #define RCC			((RCC_RegDef_t*)RCC_BASEADDR)
 #define EXTI		((EXTI_RegDef_t*)EXTI_BASEADDR)
 #define SYSCFG		((SYSCFG_RegDef_t*)SYSCFG_BASEADDR)
+
+#define SPI1		((SPI_RegDef_t*)SPI1_BASEADDR)
+#define SPI2		((SPI_RegDef_t*)SPI2I2S3_BASEADDR)
+#define SPI3		((SPI_RegDef_t*)SPI3I2S3_BASEADDR)
+#define SPI4		((SPI_RegDef_t*)SPI4_BASEADDR)
+#define SPI5		((SPI_RegDef_t*)SPI5_BASEADDR)
+#define SPI6		((SPI_RegDef_t*)SPI6_BASEADDR)
+
 /**
  * Clock Enable macros for GPIOx peripherals
  * */
@@ -217,12 +250,19 @@ typedef struct{
 #define I2C1_PCLK_EN()	(RCC->APB1ENR |= (1 << 21))
 #define I2C2_PCLK_EN()	(RCC->APB1ENR |= (1 << 22))
 #define I2C3_PCLK_EN()	(RCC->APB1ENR |= (1 << 23))
+
 /**
- * clock Enable macros for SPI peripherals
+ * clock Enable&disable macros for SPI peripherals
  * */
 #define SPI1_PCLK_EN()	(RCC->APB2ENR |= (1 << 12))
 #define SPI4_PCLK_EN()	(RCC->APB2ENR |= (1 << 13))
+#define SPI2_PCLK_EN()	(RCC->APB1ENR |= (1 << 14))
+#define SPI3_PCLK_EN()	(RCC->APB1ENR |= (1 << 15))
 
+#define SPI1_PCLK_DI()	(RCC->APB2ENR &= ~(1 << 12))
+#define SPI4_PCLK_DI()	(RCC->APB2ENR &= ~(1 << 13))
+#define SPI2_PCLK_DI()	(RCC->APB1ENR &= ~(1 << 14))
+#define SPI3_PCLK_DI()	(RCC->APB1ENR &= ~(1 << 15))
 
 /**
  * Clock disable macros for GPIO peripherals
@@ -240,7 +280,7 @@ typedef struct{
 #define GPIOK_PCLK_DI()	(RCC->AHB1ENR &= ~(1 << 10))
 
 /*
- * Reset gpio clock registers
+ * Reset GPIO clock registers
  * */
 #define GPIOA_PCLK_RESET()	do{ (RCC->AHB1ENR |= (1 << 0)); (RCC->AHB1ENR &= ~(1 << 0)); }while(0)
 #define GPIOB_PCLK_RESET()	do{ (RCC->AHB1ENR |= (1 << 1)); (RCC->AHB1ENR &= ~(1 << 1)); }while(0)
@@ -304,6 +344,36 @@ typedef struct{
 #define NVIC_IRQ_PRI113 13
 #define NVIC_IRQ_PRIO14 14
 #define NVIC_IRQ_PRIO15 15
+
+/*************************************************************
+ * Bit position definitions of SPI peripheral
+ *************************************************************/
+
+/*
+ * CR1 bit positions, Reference Manual section 28.5.1
+ * */
+#define SPI_CR1_CPHA      0
+#define SPI_CR1_CPOL      1
+#define SPI_CR1_BR        3
+#define SPI_CR1_SSM       9
+#define SPI_CR1_RXONLY   10
+#define SPI_CR1_DFF	     11
+#define SPI_CR1_BIDIOE   14
+#define SPI_CR1_BIDIMODE 15
+
+
+
+
+
+#include "stm32f407xx_spi_driver.h"
+#include "stm32f407xx_gpio_driver.h"
+
+
+
+
+
+
+
 
 
 
