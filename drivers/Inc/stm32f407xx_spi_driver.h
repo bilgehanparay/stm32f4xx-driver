@@ -70,6 +70,27 @@ typedef struct{
 #define SPI_SSM_EN 1
 #define SPI_SSM_DI 0
 
+/**
+ *@SPI_SR
+ **/
+#define SPI_SR_TXE 		1
+#define SPI_SR_RXNE 	0
+#define SPI_SR_BSY 		7
+#define SPI_SR_CHSIDE 	2
+#define SPI_SR_UDR 		3
+#define SPI_SR_CRC_ERR 	4
+#define SPI_SR_MODF 	5
+#define SPI_SR_OVR 		6
+#define SPI_SR_FRE 		8
+
+
+/**
+ * SPI related flag definitions
+ * */
+#define SPI_TXE_FLAG 	(1 << SPI_SR_TXE)
+#define SPI_RXNE_FLAG	(1 << SPI_SR_RXNE)
+#define SPI_BUSY_FLAG	(1 << SPI_SR_BSY)
+
 /*
  * Perip. Clock Settings
  * */
@@ -95,6 +116,10 @@ void SPI_IRQInterruptConfig(uint8_t IRQNumber, uint8_t EnOrDi);
 void SPI_IRQPriorityConfig(uint8_t IRQNumber, uint8_t IRqPriority);
 void SPI_IRQHandling(SPI_Handle_t *pHandle);
 
+/**
+ * Generic functions
+ * */
+uint8_t SPI_GetFlagStatus(SPI_RegDef_t *pSPIx, uint32_t flagName);
 #endif /* INC_STM32F4XX_SPI_DRIVER_H_*/
 
 

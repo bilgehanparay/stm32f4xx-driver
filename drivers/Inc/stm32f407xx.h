@@ -42,6 +42,8 @@
 #define RESET	DISABLE
 #define GPIO_PIN_SET SET
 #define GPIO_PIN_RESET   RESET
+#define FLAG_RESET RESET
+#define FLAG_SET SET
 /**
  * Base addresses of flash and SRAM memories
  * */
@@ -360,8 +362,6 @@ typedef struct{
 #define SPI_CR1_DFF	     11
 #define SPI_CR1_BIDIOE   14
 #define SPI_CR1_BIDIMODE 15
-
-
 
 
 
