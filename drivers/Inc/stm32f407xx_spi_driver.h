@@ -51,6 +51,11 @@ typedef struct{
 #define SPI_SCLK_SPEED_DIV64 5
 #define SPI_SCLK_SPEED_DIV128 6
 #define SPI_SCLK_SPEED_DIV256 7
+/*
+ *@SPI_CPHA
+ **/
+#define SPI_CPHA_LOW 0
+#define SPI_CPHA_HIGH 1
 
 /*
  *@SPI_DFF
@@ -69,6 +74,25 @@ typedef struct{
  **/
 #define SPI_SSM_EN 1
 #define SPI_SSM_DI 0
+
+
+/**
+ * @SPI_CR
+ * */
+#define SPI_CR1_CPHA		0
+#define SPI_CR1_CPOL		1
+#define SPI_CR1_MSTR		2
+#define SPI_CR1_BR			3
+#define SPI_CR1_SPE     	6
+#define SPI_CR1_LSBFIRST 	7
+#define SPI_CR1_SSI			8
+#define SPI_CR1_SSM			9
+#define SPI_CR1_RXONLY		10
+#define SPI_CR1_DFF			11
+#define SPI_CR1_CRCNEXT		12
+#define SPI_CR1_CRCEN		13
+#define SPI_CR1_BIDIOE		14
+#define SPI_CR1_BIDIMODE	15
 
 /**
  *@SPI_SR
@@ -115,6 +139,12 @@ void SPI_ReceiveData(SPI_RegDef_t *pSPIx, uint8_t *pTxBuffer, uint32_t Len);
 void SPI_IRQInterruptConfig(uint8_t IRQNumber, uint8_t EnOrDi);
 void SPI_IRQPriorityConfig(uint8_t IRQNumber, uint8_t IRqPriority);
 void SPI_IRQHandling(SPI_Handle_t *pHandle);
+
+/**
+ * Other peripheral controls
+ * */
+void SPI_PeripheralControl(SPI_RegDef_t *pSPIx, uint8_t EnOrDi);
+void SPI_SSIConfig(SPI_RegDef_t *pSPIx, uint8_t EnOrDi);
 
 /**
  * Generic functions
